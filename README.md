@@ -42,17 +42,19 @@ docker exec -it php bin/console assetic:dump --no-debug
 $ docker exec -it php bin/console doctrine:schema:update --force
 ```
 
-##### Container ip
+6. ##### Container ip
  ```
 $ docker inspect server
-```
 Server ip will be available under IPAddress key in NetworkSettings section.
-
-##### Notifier tests
 ```
+
+6. ##### Running tests
+ ```
 $ docker exec -it php vendor/bin/phpunit
+```
 
 ####### TESTING OAUTH
+```
 ###Uncomment is_Granted part in GitController::getAllStatisticsAction($userName, $repoName)
 
 ###To create oauth client (you may use any other grand types according fos auth bundle)
@@ -72,11 +74,13 @@ http://127.0.0.1:8000/app_dev.php/oauth/v2/token?client_id=__CLIENTID__&client_s
 See Authorization Success:
     The following will return successful set of users (json).
     curl -H "Authorization: Bearer ACCESS_TOKEN" -H "Accept: application/json" http://127.0.0.1:8000/app_dev.php/users
-
+```
 
 ####### Additional useful info
+```
 To rebuild vue
 cd src/AppBundle/Resources/public/js/vue && browserify -t vueify -e apps/homepage.js -o builds/homepage.js
 
 To check code standards
 docker exec -it php ./vendor/bin/phpcs --standard=PSR1,PSR2,./ct3-ruleset.xml --extensions=php src/ --colors
+```
