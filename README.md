@@ -37,19 +37,18 @@ docker exec -it php bin/console assets:install --no-debug
 docker exec -it php bin/console assetic:dump --no-debug
 ```
 
-5. ## DB schema
+5.## DB schema
 ```
 $ docker exec -it php bin/console doctrine:schema:update --force
 ```
 
-6. ## Container ip
- ```
-$ docker inspect server
-Server ip will be available under IPAddress key in NetworkSettings section.
+6.## Container ip
+```
+$ docker exec -it php bin/console doctrine:schema:update --force
 ```
 
-6. ## Running tests
- ```
+7.## Running tests
+```
 $ docker exec -it php vendor/bin/phpunit
 ```
 
