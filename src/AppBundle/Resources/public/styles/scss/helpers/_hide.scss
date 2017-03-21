@@ -1,0 +1,26 @@
+@media only screen and (max-width: 767px) {
+    .mobile.hidden,
+    .all-screens.hidden {
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .tablet.hidden,
+    .all-screens.hidden {
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .small.monitor.hidden,
+    .computer.hidden,
+    .all-screens.hidden {
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .large.monitor.hidden,
+    .computer.hidden,
+    .all-screens.hidden {
+        display: none !important;
+    }
+}

@@ -1,0 +1,9 @@
+<div class="ui progress inverted {{ typeClass }}" data-percent="{{ score }}">
+    <div class="bar"></div>
+    <div class="label">
+        {% if text %}
+            {{ text }}
+        {% endif %}
+        {{ score }}% Score
+    </div>
+</div>

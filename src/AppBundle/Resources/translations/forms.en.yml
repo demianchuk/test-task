@@ -1,0 +1,6 @@
+compare_form:
+    url_placeholder_first: 'e.g. https://github.com/KnpLabs/php-github-api'
+    url_label_first: 'Type github url repository:'
+    url_placeholder_second: 'e.g. https://github.com/nrk/predis'
+    url_label_second: 'Type github url repository:'
+    submit_button: 'Compare repo data'

@@ -1,0 +1,43 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+/*-------------------
+       Elements
+--------------------*/
+
+/* Form */
+@gutterWidth: 1em;
+@rowDistance: 1em;
+
+/* Form Label */
+@labelDistance: @4px;
+@labelMargin: 0em 0em @labelDistance 0em;
+@labelFontSize: @relativeMedium;
+@labelFontWeight: bold;
+@labelTextTransform: none;
+@labelColor: @textColor;
+
+/* Text Area */
+@textAreaPadding: @inputVerticalPadding @inputHorizontalPadding;
+@textAreaHeight: 7em;
+@textAreaResize: vertical;
+@textAreaLineHeight: 1.2857;
+@textAreaMinHeight: 2em;
+@textAreaMaxHeight: 10em;
+@textAreaBackground: @inputBackground;
+@textAreaBorder: @inputBorder;
+@textAreaFontSize: @inputFontSize;
+@textAreaTransition: @inputTransition;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Placeholder */
+@inputPlaceholderColor: lighten(@inputColor, 35);
+@inputPlaceholderFocusColor: lighten(@inputColor, 25);
+
+/* Placeholder Error */
+@inputErrorPlaceholderColor: lighten(@formErrorColor, 40);
+@inputErrorPlaceholderFocusColor: lighten(@formErrorColor, 30);

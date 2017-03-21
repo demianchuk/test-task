@@ -1,0 +1,64 @@
+<div class="ui inverted segment">
+    {{ progress_bar_widget(score) }}
+    <div class="ui orange ribbon label">
+        {{ 'statistic_header'|trans }}: {{ urlLink }}
+    </div>
+    <div class="ui inverted relaxed divided list">
+        <div class="item">
+            <i class="star icon"></i>
+            <div class="content">
+                <a class="header">{{ 'stars_header'|trans }}</a>
+                <div class="description">{{ objectStatistic.getStarsNumber() }}</div>
+            </div>
+        </div>
+        <div class="item">
+            <i class="unhide icon"></i>
+            <div class="content">
+                <a class="header">{{ 'subscribers_header'|trans }}</a>
+                <div class="description">{{ objectStatistic.getSubscribersNumber() }}</div>
+            </div>
+        </div>
+        <div class="item">
+            <i class="fork icon"></i>
+            <div class="content">
+                <a class="header">{{ 'forks_header'|trans }}</a>
+                <div class="description">{{ objectStatistic.getForksNumber() }}</div>
+            </div>
+        </div>
+        <div class="item">
+            <i class="fork icon"></i>
+            <div class="content">
+                <a class="header">{{ 'pull_request_open_header'|trans }}</a>
+                <div class="description">{{ objectStatistic.getOpenPullRequestNumber() }}</div>
+            </div>
+        </div>
+        <div class="item">
+            <i class="fork icon"></i>
+            <div class="content">
+                <a class="header">{{ 'pull_request_close_header'|trans }}</a>
+                <div class="description">{{ objectStatistic.getClosedPullRequestNumber() }}</div>
+            </div>
+        </div>
+        <div class="item">
+            <i class="calendar icon"></i>
+            <div class="content">
+                <a class="header">{{ 'last_update_header'|trans }}</a>
+                <div class="description">{{ objectStatistic.getLastUpdateDate()|localizeddate('full', 'medium') }}</div>
+            </div>
+        </div>
+        <div class="item">
+            <i class="calendar icon"></i>
+            <div class="content">
+                <a class="header">{{ 'last_release_header'|trans }}</a>
+                <div class="description">{{ objectStatistic.getLastReleaseDate()|localizeddate('full', 'medium') }}</div>
+            </div>
+        </div>
+        <div class="item">
+            <i class="calendar icon"></i>
+            <div class="content">
+                <a class="header">{{ 'last_merge_date_header'|trans }}</a>
+                <div class="description">{{ objectStatistic.getLastPullRequestMergeDate()|localizeddate('full', 'medium') }}</div>
+            </div>
+        </div>
+    </div>
+</div>

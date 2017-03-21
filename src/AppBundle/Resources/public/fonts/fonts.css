@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Signika-Light'), url(font-signika-light.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 400,500,600;
+  src: local('Signika'), local('Signika-Regular'), url(font-signika.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Signika-Semibold'), url(font-signika-semibold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Signika-Bold'), url(font-signika-bold.woff2) format('woff2');
+}

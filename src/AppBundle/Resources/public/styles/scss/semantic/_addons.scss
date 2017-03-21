@@ -1,0 +1,18 @@
+/* White Row/Column */
+
+.ui.grid > .white.row,
+.ui.grid > .white.column,
+.ui.grid > .row > .white.column {
+    background-color: #FFFFFF !important;
+}
+
+.ui.grid > .row > .white.column {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.ui.feed>.event>.content {
+    margin: .5em 1.14285714em .35714286em 0;
+}

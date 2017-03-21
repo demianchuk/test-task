@@ -1,0 +1,169 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@fontName          : 'Signika';
+@importGoogleFonts : false;
+
+@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : #FF7000;
+@secondaryColor      : @black;
+
+@lightPrimaryColor   : #FFA64F;
+@lightSecondaryColor : @lightBlack;
+
+/*-------------------
+        Hover
+--------------------*/
+
+/*---  Colors  ---*/
+@primaryColorHover    : saturate(lighten(@primaryColor, 15), 10, relative);
+@secondaryColorHover  : saturate(lighten(@secondaryColor, 15), 10, relative);
+
+@redHover             : saturate(lighten(@red, 15), 10, relative);
+@orangeHover          : saturate(lighten(@orange, 15), 10, relative);
+@yellowHover          : saturate(lighten(@yellow, 15), 10, relative);
+@oliveHover           : saturate(lighten(@olive, 15), 10, relative);
+@greenHover           : saturate(lighten(@green, 15), 10, relative);
+@tealHover            : saturate(lighten(@teal, 15), 10, relative);
+@blueHover            : saturate(lighten(@blue, 15), 10, relative);
+@violetHover          : saturate(lighten(@violet, 15), 10, relative);
+@purpleHover          : saturate(lighten(@purple, 15), 10, relative);
+@pinkHover            : saturate(lighten(@pink, 15), 10, relative);
+@brownHover           : saturate(lighten(@brown, 15), 10, relative);
+
+@lightRedHover        : saturate(lighten(@lightRed, 15), 10, relative);
+@lightOrangeHover     : saturate(lighten(@lightOrange, 15), 10, relative);
+@lightYellowHover     : saturate(lighten(@lightYellow, 15), 10, relative);
+@lightOliveHover      : saturate(lighten(@lightOlive, 15), 10, relative);
+@lightGreenHover      : saturate(lighten(@lightGreen, 15), 10, relative);
+@lightTealHover       : saturate(lighten(@lightTeal, 15), 10, relative);
+@lightBlueHover       : saturate(lighten(@lightBlue, 15), 10, relative);
+@lightVioletHover     : saturate(lighten(@lightViolet, 15), 10, relative);
+@lightPurpleHover     : saturate(lighten(@lightPurple, 15), 10, relative);
+@lightPinkHover       : saturate(lighten(@lightPink, 15), 10, relative);
+@lightBrownHover      : saturate(lighten(@lightBrown, 15), 10, relative);
+@lightGreyHover       : saturate(lighten(@lightGrey, 15), 10, relative);
+@lightBlackHover      : saturate(lighten(@fullBlack, 15), 10, relative);
+
+/*---  Emotive  ---*/
+@positiveColorHover   : saturate(lighten(@positiveColor, 15), 10, relative);
+@negativeColorHover   : saturate(lighten(@negativeColor, 15), 10, relative);
+
+/*---  Brand   ---*/
+@facebookHoverColor   : saturate(lighten(@facebookColor, 15), 10, relative);
+@twitterHoverColor    : saturate(lighten(@twitterColor, 15), 10, relative);
+@googlePlusHoverColor : saturate(lighten(@googlePlusColor, 15), 10, relative);
+@linkedInHoverColor   : saturate(lighten(@linkedInColor, 15), 10, relative);
+@youtubeHoverColor    : saturate(lighten(@youtubeColor, 15), 10, relative);
+@instagramHoverColor  : saturate(lighten(@instagramColor, 15), 10, relative);
+@pinterestHoverColor  : saturate(lighten(@pinterestColor, 15), 10, relative);
+@vkHoverColor         : saturate(lighten(@vkColor, 15), 10, relative);
+
+/*---  Dark Tones  ---*/
+@fullBlackHover       : lighten(@fullBlack, 5);
+@blackHover           : lighten(@black, 5);
+@greyHover            : lighten(@grey, 5);
+
+/*---  Light Tones  ---*/
+@whiteHover           : darken(@white, 5);
+@offWhiteHover        : darken(@offWhite, 5);
+@darkWhiteHover       : darken(@darkWhite, 5);
+
+/*-------------------
+        Focus
+--------------------*/
+
+/*---  Colors  ---*/
+@primaryColorFocus    : saturate(lighten(@primaryColor, 8), 20, relative);
+@secondaryColorFocus  : saturate(lighten(@secondaryColor, 8), 20, relative);
+
+@redFocus             : saturate(lighten(@red, 8), 20, relative);
+@orangeFocus          : saturate(lighten(@orange, 8), 20, relative);
+@yellowFocus          : saturate(lighten(@yellow, 8), 20, relative);
+@oliveFocus           : saturate(lighten(@olive, 8), 20, relative);
+@greenFocus           : saturate(lighten(@green, 8), 20, relative);
+@tealFocus            : saturate(lighten(@teal, 8), 20, relative);
+@blueFocus            : saturate(lighten(@blue, 8), 20, relative);
+@violetFocus          : saturate(lighten(@violet, 8), 20, relative);
+@purpleFocus          : saturate(lighten(@purple, 8), 20, relative);
+@pinkFocus            : saturate(lighten(@pink, 8), 20, relative);
+@brownFocus           : saturate(lighten(@brown, 8), 20, relative);
+
+@lightRedFocus        : saturate(lighten(@lightRed, 8), 20, relative);
+@lightOrangeFocus     : saturate(lighten(@lightOrange, 8), 20, relative);
+@lightYellowFocus     : saturate(lighten(@lightYellow, 8), 20, relative);
+@lightOliveFocus      : saturate(lighten(@lightOlive, 8), 20, relative);
+@lightGreenFocus      : saturate(lighten(@lightGreen, 8), 20, relative);
+@lightTealFocus       : saturate(lighten(@lightTeal, 8), 20, relative);
+@lightBlueFocus       : saturate(lighten(@lightBlue, 8), 20, relative);
+@lightVioletFocus     : saturate(lighten(@lightViolet, 8), 20, relative);
+@lightPurpleFocus     : saturate(lighten(@lightPurple, 8), 20, relative);
+@lightPinkFocus       : saturate(lighten(@lightPink, 8), 20, relative);
+@lightBrownFocus      : saturate(lighten(@lightBrown, 8), 20, relative);
+@lightGreyFocus       : saturate(lighten(@lightGrey, 8), 20, relative);
+@lightBlackFocus      : saturate(lighten(@fullBlack, 8), 20, relative);
+
+/*---  Emotive  ---*/
+@positiveColorFocus   : saturate(lighten(@positiveColor, 8), 20, relative);
+@negativeColorFocus   : saturate(lighten(@negativeColor, 8), 20, relative);
+
+/*---  Brand   ---*/
+@facebookFocusColor   : saturate(lighten(@facebookColor, 8), 20, relative);
+@twitterFocusColor    : saturate(lighten(@twitterColor, 8), 20, relative);
+@googlePlusFocusColor : saturate(lighten(@googlePlusColor, 8), 20, relative);
+@linkedInFocusColor   : saturate(lighten(@linkedInColor, 8), 20, relative);
+@youtubeFocusColor    : saturate(lighten(@youtubeColor, 8), 20, relative);
+@instagramFocusColor  : saturate(lighten(@instagramColor, 8), 20, relative);
+@pinterestFocusColor  : saturate(lighten(@pinterestColor, 8), 20, relative);
+@vkFocusColor         : saturate(lighten(@vkColor, 8), 20, relative);
+
+/*---  Dark Tones  ---*/
+@fullBlackFocus       : lighten(@fullBlack, 8);
+@blackFocus           : lighten(@black, 8);
+@greyFocus            : lighten(@grey, 8);
+
+/*---  Light Tones  ---*/
+@whiteFocus           : darken(@white, 8);
+@offWhiteFocus        : darken(@offWhite, 8);
+@darkWhiteFocus       : darken(@darkWhite, 8);
+
+/*-------------------
+       Links
+--------------------*/
+
+@linkColor           : #0072bc;
+@linkUnderline       : none;
+@linkHoverColor      : darken(saturate(@linkColor, 20), 15, relative);
+@linkHoverUnderline  : @linkUnderline;
+
+/*-------------------
+        Paths
+--------------------*/
+
+/* For source only. Modified in gulp for dist */
+@imagePath : '../../../../semantic/src/themes/default/assets/images';
+@fontPath  : 'bundles/app/fonts';
+
+/*--------------
+  Page Heading
+---------------*/
+
+@headerFontWeight : 500;
+@headerLineHeight : 1.2857em;
+
+@h1 : 2.5rem;
+@h2 : 2rem;
+@h3 : 1.6rem;
+@h4 : 1.071rem;
+@h5 : 1rem;

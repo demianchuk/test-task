@@ -1,0 +1,26 @@
+{
+  "name": "Schibsted",
+  "version": "0.1.0",
+  "description": "Schibsted - Symfony project",
+  "main": "",
+  "private": true,
+  "homepage": "http://www.schibsted.pl/",
+  "dependencies": {
+    "babel-core": "",
+    "babel-plugin-transform-runtime": "",
+    "babel-preset-es2015": "",
+    "babel-runtime": "5.8.*",
+    "browserify": "12.0.*",
+    "es5-shim": "~4.0.5",
+    "jquery": "3.1.1",
+    "semantic-ui": "~2.2",
+    "vue": "1.0.*",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-resource": "0.6.*",
+    "vue-validator": "2.1.*",
+    "vueify": "7.0.*",
+    "vueify-insert-css": "",
+    "moment": "~2.11.2"
+  },
+  "devDependencies": {}
+}

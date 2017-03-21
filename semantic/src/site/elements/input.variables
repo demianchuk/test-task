@@ -1,0 +1,14 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+/*-------------------
+        States
+--------------------*/
+
+/* Placeholder */
+@inputPlaceholderColor: lighten(@inputColor, 35);
+@inputPlaceholderFocusColor: lighten(@inputColor, 25);
+
+@placeholderErrorColor: lighten(@errorColor, 40);
+@placeholderErrorFocusColor: lighten(@errorColor, 30);

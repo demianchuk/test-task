@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ app.request.locale[:2] }}"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ app.request.locale[:2] }}"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ app.request.locale[:2] }}"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ app.request.locale[:2] }}"> <!--<![endif]-->
+<head>
+    <title>{% block title %}{{ 'default.title'|trans({},'metatags') }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{ 'default.description'|trans({},'metatags') }}{% endblock %}" />
+    <meta name="keywords" content="{% block keywords %}{{ 'default.keywords'|trans({},'metatags') }}{% endblock %}" />
+    {% block canonical %}{% endblock %}
+    {% block rel_links %}{% endblock %}
+    {% block metatags %}
+        {% include 'AppBundle::Common/meta_tags.html.twig' %}
+    {% endblock %}
+    {% block stylesheets %}
+        {% stylesheets
+            '@main_css'
+            filter='cssrewrite' %}
+            <link rel="stylesheet" type="text/css" href="{{ asset_url }}" media="screen" title="main styles" />
+        {% endstylesheets %}
+    {% endblock %}
+</head>
+<body>
+    <!-- .container -->
+    <div class="ui container main-container">
+        {% block body %}{% endblock %}
+    </div>
+    <!-- /.container -->
+
+    {% block javascripts %}
+        {% javascripts
+            '@main_js'
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+
+</body>
+</html>

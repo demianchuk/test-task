@@ -1,0 +1,58 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block body %}
+
+    <div class="ui inverted segment">
+        <div class="ui inverted form">
+            {{ form_start(compareForm) }}
+                <div class="two fields">
+                    <div class="field">
+                        {{ form_row(compareForm.urlFirst) }}
+                    </div>
+                    <div class="field">
+                        {{ form_row(compareForm.urlSecond) }}
+                    </div>
+                </div>
+                <div class="text-centered margin-xlarge-top">
+                    {{ form_row(compareForm.submit) }}
+                </div>
+            {{ form_end(compareForm) }}
+        </div>
+    </div>
+
+    <div class="ui stackable grid">
+
+        {% if firstUrlStatistic and secondUrlStatistic %}
+            <div class="eight wide column">
+                {{ url_statistics_widget(firstUrlStatistic, repoStatistic.getUrlFirst()) }}
+            </div>
+
+            <div class="eight wide column">
+                {{ url_statistics_widget(secondUrlStatistic, repoStatistic.getUrlSecond()) }}
+            </div>
+        {% endif %}
+
+        {% if lastRepoStatistics|length > 0 %}
+            <div class="sixteen wide column">
+                <div class="ui inverted segment">
+                    <div class="ui orange large attached top label text-centered">
+                        {{ 'table_header'|trans }}
+                    </div>
+                    <div class="ui stackable grid">
+                        {% for statistic in lastRepoStatistics %}
+                            <div class="eight wide column">
+                                {{ progress_bar_widget(statistic.scoreFirst, statistic.urlFirst) }}
+                                <div class="ui divider"></div>
+                            </div>
+                            <div class="eight wide column">
+                                {{ progress_bar_widget(statistic.scoreSecond, statistic.urlSecond) }}
+                                <div class="ui divider"></div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+{% endblock %}

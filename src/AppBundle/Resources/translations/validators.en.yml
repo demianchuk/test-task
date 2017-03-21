@@ -1,0 +1,6 @@
+wrong_git_url: 'Current url is unvalid or is not reachable'
+wrong_git_host: 'You can provide only https://github.com urls'
+the_same_url: 'You provided the same url in both fields'
+correct_url: 'Please, provide correct https://github.com url'
+vue_error_text: 'Please check if such url really exist'
+vue_error_header: 'Something went wrong while processing your request'

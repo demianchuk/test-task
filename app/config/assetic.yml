@@ -1,0 +1,42 @@
+assetic:
+    assets:
+        main_js:
+            inputs:
+                - '%kernel.root_dir%/../node_modules/jquery/dist/jquery.min.js'
+                - '%kernel.root_dir%/../semantic/dist/semantic.min.js'
+                - '%kernel.root_dir%/../web/bundles/fosjsrouting/js/router.js'
+                - '%kernel.root_dir%/../web/js/fos_js_routes.js'
+                - '@AppBundle/Resources/public/js/common.js'
+        home_js:
+            inputs:
+                - '%kernel.root_dir%/../node_modules/moment/min/moment-with-locales.min.js'
+                - '@AppBundle/Resources/public/js/vue/builds/homepage.js'
+        main_css:
+            inputs:
+                - '%kernel.root_dir%/../semantic/dist/semantic.min.css'
+                - '%kernel.root_dir%/../web/bundles/app/fonts/fonts.css'
+                - '%kernel.root_dir%/../web/bundles/app/styles/css/schibsted.css'
+            filters:
+                - cssrewrite
+
+        # Semantic-UI fonts
+        semantic_fonts_eot:
+            inputs:
+                - '%kernel.root_dir%/../semantic/src/themes/default/assets/fonts/icons.eot'
+            output: 'bundles/app/fonts/icons.eot'
+        semantic_fonts_svg:
+            inputs:
+                - '%kernel.root_dir%/../semantic/src/themes/default/assets/fonts/icons.svg'
+            output: 'bundles/app/fonts/icons.svg'
+        semantic_fonts_ttf:
+            inputs:
+                - '%kernel.root_dir%/../semantic/src/themes/default/assets/fonts/icons.ttf'
+            output: 'bundles/app/fonts/icons.ttf'
+        semantic_fonts_woff:
+            inputs:
+                - '%kernel.root_dir%/../semantic/src/themes/default/assets/fonts/icons.woff'
+            output: 'bundles/app/fonts/icons.woff'
+        semantic_fonts_woff2:
+            inputs:
+                - '%kernel.root_dir%/../semantic/src/themes/default/assets/fonts/icons.woff2'
+            output: 'bundles/app/fonts/icons.woff2'

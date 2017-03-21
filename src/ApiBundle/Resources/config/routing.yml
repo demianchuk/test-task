@@ -1,0 +1,9 @@
+api:
+    type: rest
+    resource: ApiBundle\Controller\GitController
+    name_prefix: api_
+
+users:
+    type: rest
+    resource: ApiBundle\Controller\UsersController
+    name_prefix: api_

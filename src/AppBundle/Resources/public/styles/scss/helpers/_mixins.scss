@@ -1,0 +1,72 @@
+@mixin text-shadow($string: 0 1px 3px rgba(0, 0, 0, 0.25))
+{
+    text-shadow: $string;
+}
+
+@mixin word-break()
+{
+    -ms-word-break: break-all;
+    word-break: break-all;
+    /* Non standard for webkit */
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)
+{
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-radius: $border-radius;
+}
+
+@mixin vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%)
+{
+        background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+        background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
+        background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
+@mixin text-muted {
+    color: $text-muted !important;
+}
+
+@mixin box-shadow($shadow)
+{
+    -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+            box-shadow: $shadow;
+}
+
+@mixin opacity($opacity)
+{
+    opacity: $opacity;
+    // IE8 filter
+    $opacity-ie: ($opacity * 100);
+    filter: #{"alpha(opacity=${opacity-ie})"};
+}
+
+@mixin center-block()
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin transition($transition)
+{
+    -webkit-transition: $transition;
+         -o-transition: $transition;
+            transition: $transition;
+}
+
+@mixin user-select($select)
+{
+    -webkit-user-select: $select;
+       -moz-user-select: $select;
+        -ms-user-select: $select; // IE10+
+            user-select: $select;
+}

@@ -1,0 +1,36 @@
+services:
+    #services
+    app.git_hub_service:
+        class: AppBundle\Interfaces\GitHubServiceInterface
+        factory: ['AppBundle\DependencyInjection\GitHub\GitHubServiceFactory', getGitHubService]
+        arguments: ["%use_redis_pool%", "%redis_host%", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: git }
+
+    app.score_service:
+        class: AppBundle\DependencyInjection\GitHub\CalculateScoreService
+
+    #twig extensions
+    twig.extension.intl:
+        class: Twig_Extensions_Extension_Intl
+        tags:
+            - { name: twig.extension }
+
+    app.twig.extension.testimonials_widget:
+        class: AppBundle\Twig\UrlStatisticsWidgetExtension
+        arguments: ["@twig", "@app.score_service"]
+        tags:
+            - { name: twig.extension }
+
+    app.twig.extension.progress_bar_widget:
+        class: AppBundle\Twig\ProgressBarWidgetExtension
+        arguments: ["@twig"]
+        tags:
+            - { name: twig.extension }
+
+    #validators
+    auction_promotion_data_validator:
+        class: AppBundle\Validator\Constraints\GitHubUrlValidator
+        arguments: ["@translator"]
+        tags:
+            - { name: validator.constraint_validator, alias: git_hub_url_validator }

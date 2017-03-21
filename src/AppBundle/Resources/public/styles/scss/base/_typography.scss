@@ -1,0 +1,36 @@
+.text-sm {
+    font-size: $font-size-small;
+}
+
+.text-lg {
+    font-size: $font-size-large;
+}
+
+.text-xlg {
+    font-size: 20px;
+}
+
+.text-xxlg {
+    font-size: 35px;
+}
+
+.text-green {
+    color: #60B341;
+}
+
+ul.gray-pointer {
+    list-style: none;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        background: url(../../images/ul-pointer.png) 0 7px no-repeat;
+        padding-left: 15px;
+        font-size: 13px;
+        margin: 0 0 4px 0;
+        color: #000;
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,245 @@
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.margin-auto {
+    margin: auto !important;
+}
+
+.no-margin-left {
+    margin-left: 0 !important;
+}
+
+.no-margin-right {
+    margin-right: 0 !important;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.margin-small-vertical {
+    margin-top: $padding-small-vertical !important;
+    margin-bottom: $padding-small-vertical !important;
+}
+
+.margin-small-horizontal {
+    margin-right: $padding-small-horizontal !important;
+    margin-left: $padding-small-horizontal !important;
+}
+
+.margin-base-vertical {
+    margin-top: $padding-base-vertical !important;
+    margin-bottom: $padding-base-vertical !important;
+}
+
+.margin-base-horizontal {
+    margin-right: $padding-base-horizontal !important;
+    margin-left: $padding-base-horizontal !important;
+}
+
+.margin-large-vertical {
+    margin-top: $padding-large-vertical !important;
+    margin-bottom: $padding-large-vertical !important;
+}
+
+.margin-large-horizontal {
+    margin-right: $padding-large-horizontal !important;
+    margin-left: $padding-large-horizontal !important;
+}
+
+.margin-xlarge-vertical {
+    margin-top: ($padding-large-vertical * 2) !important;
+    margin-bottom: ($padding-large-vertical * 2) !important;
+}
+
+.margin-xlarge-horizontal {
+    margin-right: ($padding-large-horizontal * 2) !important;
+    margin-left: ($padding-large-horizontal * 2) !important;
+}
+
+.margin-xlarge-top {
+    margin-top: ($padding-large-vertical * 2) !important;
+}
+
+.margin-xlarge-bottom {
+    margin-bottom: ($padding-large-vertical * 2) !important;
+}
+
+.margin-xxlarge-vertical {
+    margin-top: ($padding-large-vertical * 3) !important;
+    margin-bottom: ($padding-large-vertical * 3) !important;
+}
+
+.margin-xxlarge-top {
+    margin-top: ($padding-large-vertical * 3) !important;
+}
+
+.margin-xxlarge-bottom {
+    margin-bottom: ($padding-large-vertical * 3) !important;
+}
+
+.textarea-mini {
+    height: 4.5em !important;
+}
+
+.display-inline {
+    display: inline !important;
+}
+
+.display-inline-block {
+    display: inline-block !important;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.display-block {
+    display: block !important;
+}
+
+.vertical-align-middle {
+    vertical-align: middle !important;
+}
+
+.font-family-secondary {
+    font-family: $font-family-heading;
+}
+
+.text-muted {
+    @include text-muted;
+}
+
+.text-italic {
+    font-style: italic !important;
+}
+
+.text-centered {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.primary-text {
+    color: $brand-primary !important;
+}
+
+.positive-text {
+   color: $green-base;
+}
+
+.negative-text {
+   color: $red-base;
+}
+
+.warning-text {
+    color: $brand-warning;
+}
+
+.big-dotted-border {
+    border: 1px dashed #999 !important;
+    box-shadow: none !important;
+}
+
+.bolded {
+    font-weight: bold;
+}
+
+.bigger-font {
+    font-size: 1.2em;
+}
+
+.smaller-font {
+    font-size: 0.8em;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.left-floated {
+    float: left;
+}
+
+.right-floated {
+    float: right;
+}
+
+.no-focus:focus {
+    outline: none;
+}
+
+.black-link {
+    color: black;
+}
+
+.blue-text {
+    color: $link-color !important;
+}
+
+.min-width-20 {
+    width: 20%;
+}
+
+.grey-border {
+    box-shadow: 0px 0px 1px #888888;
+}
+
+.white-bg {
+    background-color: #fff !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.width-5 {
+    width: 5% !important;
+}
+
+.width-10 {
+    width: 10% !important;
+}
+
+.width-25 {
+    width: 25% !important;
+}

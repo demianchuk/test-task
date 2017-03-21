@@ -1,0 +1,84 @@
+<template id="statistic-widget-template">
+    <div v-if="errorResponse" class="eight wide column">
+        <div class="ui inverted segment">
+            <div class="ui negative message">
+                <div class="header">{{ 'vue_error_header'|trans({},'validators') }} </div>
+                <p>{{ 'vue_error_text'|trans({},'validators') }}</p>
+            </div>
+        </div>
+    </div>
+    <div v-if="visible" class="eight wide column">
+        <div class="ui inverted segment">
+            <div class="ui @{ loader } inverted dimmer">
+            <div class="ui text loader">Loading</div>
+        </div>
+            <div id="prb-@{ typeValue }" class="ui progress inverted @{ class }">
+                <div class="bar"></div>
+                <div class="label">
+                   @{ score }% Score
+                </div>
+            </div>
+            <div class="ui orange ribbon label">
+                {{ 'statistic_header'|trans }}: @{ urlValue }
+            </div>
+            <div class="ui inverted relaxed divided list">
+                <div class="item">
+                    <i class="star icon"></i>
+                    <div class="content">
+                        <a class="header">{{ 'stars_header'|trans }}</a>
+                        <div class="description">@{ stars }</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="unhide icon"></i>
+                    <div class="content">
+                        <a class="header">{{ 'subscribers_header'|trans }}</a>
+                        <div class="description">@{ subscribers }</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="fork icon"></i>
+                    <div class="content">
+                        <a class="header">{{ 'forks_header'|trans }}</a>
+                        <div class="description">@{ forks }</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="fork icon"></i>
+                    <div class="content">
+                        <a class="header">{{ 'pull_request_open_header'|trans }}</a>
+                        <div class="description">@{ openPullRequests }</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="fork icon"></i>
+                    <div class="content">
+                        <a class="header">{{ 'pull_request_close_header'|trans }}</a>
+                        <div class="description">@{ closedPullRequests }</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i>
+                    <div class="content">
+                        <a class="header">{{ 'last_update_header'|trans }}</a>
+                        <div class="description">@{ lastUpdate }</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i>
+                    <div class="content">
+                        <a class="header">{{ 'last_release_header'|trans }}</a>
+                        <div class="description">@{ lastRelease }</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i>
+                    <div class="content">
+                        <a class="header">{{ 'last_merge_date_header'|trans }}</a>
+                        <div class="description">@{ pullRequestMerge }</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

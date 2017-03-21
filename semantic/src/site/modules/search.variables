@@ -1,0 +1,31 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+/*******************************
+            States
+*******************************/
+
+/* Focus */
+@promptFocusBackground: @promptBackground;
+@promptFocusBorderColor: @selectedBorderColor;
+@promptFocusColor: @selectedTextColor;
+
+/* Hover */
+@resultHoverBackground: rgba(0,0,0,.06);
+@actionHoverBackground: #E0E0E0;
+
+/* Loading */
+@invertedLoaderFillColor: rgba(0, 0, 0, 0.15);
+
+/* Active Category */
+@categoryActiveBackground: @darkWhite;
+@categoryNameActiveColor: @textColor;
+
+/* Active Result */
+@resultActiveBorderLeft: @internalBorderColor;
+@resultActiveBackground: @darkWhite;
+@resultActiveBoxShadow: none;
+@resultActiveTitleColor: @darkTextColor;
+@resultActiveDescriptionColor: @darkTextColor;
+@resultsZIndex: 998;

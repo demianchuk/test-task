@@ -1,0 +1,47 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block body %}
+    <div id="statistics">
+        <div class="ui inverted segment">
+            <validator name="validation">
+                <div class="ui inverted form">
+                    {{ form_start(compareForm) }}
+                        <div class="two fields">
+                            <div class="field">
+                                {{ form_row(compareForm.urlFirst) }}
+                                <div v-if="$validation.url1.url && $validation.url1.dirty" class="ui pointing red basic label">
+                                    {{ 'correct_url'|trans({},'validators') }}
+                                </div>
+                            </div>
+                            <div class="field">
+                                {{ form_row(compareForm.urlSecond) }}
+                                <div v-if="$validation.url2.url && $validation.url2.dirty" class="ui pointing red basic label">
+                                    {{ 'correct_url'|trans({},'validators') }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-centered margin-xlarge-top">
+                            {{ form_row(compareForm.submit) }}
+                        </div>
+                    {{ form_end(compareForm) }}
+                </div>
+            </validator>
+        </div>
+
+        <div class="ui stackable grid">
+            <statistic-widget v-bind:url-parent="urlFirst" type-value="first" ></statistic-widget>
+            <statistic-widget v-bind:url-parent="urlSecond" type-value="second"></statistic-widget>
+        </div>
+    </div>
+    {% include 'AppBundle::Vue/statistic_vue_template.html.twig' %}
+
+    {% block javascripts %}
+        {{ parent() }}
+        {% javascripts
+            '@home_js'
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+
+{% endblock %}
