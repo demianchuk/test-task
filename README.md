@@ -42,9 +42,9 @@ docker exec -it php bin/console assetic:dump --no-debug
 $ docker exec -it php bin/console doctrine:schema:update --force
 ```
 
-6.## Container ip
+6.## VIRTUAL HOST
 ```
-$ docker exec -it php bin/console doctrine:schema:update --force
+$ Add virtual host: symfony.test.dev to your hosts file
 ```
 
 7.## Running tests

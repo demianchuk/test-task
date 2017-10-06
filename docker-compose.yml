@@ -1,6 +1,13 @@
 version: '2'
 
 services:
+    nginx-proxy:
+        image: jwilder/nginx-proxy
+        container_name: nginx-proxy
+        ports:
+          - "81:80"
+        volumes:
+          - /var/run/docker.sock:/tmp/docker.sock:ro
     db:
         image: mysql
         container_name: "db"
@@ -27,7 +34,9 @@ services:
             - php
         volumes:
             - ./ci/logs/nginx/:/var/log/nginx
+        environment:
+            - VIRTUAL_HOST=symfony.test.dev
     redis:
         image: redis:latest
         ports:
-            - 6379:6379
+            - 6381:6381
