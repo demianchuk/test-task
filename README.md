@@ -32,6 +32,7 @@ docker exec -it php bin/console cache:clear -e dev --no-debug
 
 4.## Assets
 ```
+docker exec -it php bin/console clicktrans:build:vue
 docker exec -it php bin/console fos:js-routing:dump --no-debug
 docker exec -it php bin/console assets:install --no-debug
 docker exec -it php bin/console assetic:dump --no-debug
@@ -76,9 +77,6 @@ See Authorization Success:
 ```
 
 ####### Additional useful info
-```
-To rebuild vue
-cd src/AppBundle/Resources/public/js/vue && browserify -t vueify -e apps/homepage.js -o builds/homepage.js
 
 To check code standards
 docker exec -it php ./vendor/bin/phpcs --standard=PSR1,PSR2,./ct3-ruleset.xml --extensions=php src/ --colors

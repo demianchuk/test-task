@@ -17,7 +17,7 @@ services:
             MYSQL_DATABASE: "sf"
             MYSQL_ROOT_PASSWORD: "root"
     php:
-        build: ./ci/php7-fpm
+        build: ./ci/php7-fpm-browserify
         container_name: "php"
         links:
             - db:mysqldb
@@ -25,6 +25,9 @@ services:
         volumes:
             - ./:/var/www/symfony
             - /home/commposer/.composer/cache/:/root/.composer/cache/
+            - ./ci/php7-fpm-browserify/config/php.ini:/usr/local/etc/php/php.ini
+        expose:
+            - 9901
     nginx:
         build: ./ci/nginx
         container_name: "server"

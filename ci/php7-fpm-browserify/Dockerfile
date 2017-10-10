@@ -34,9 +34,22 @@ RUN echo "xdebug.remote_enable=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xd
 RUN echo "xdebug.remote_connect_back=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo "xdebug.idekey=\"PHPSTORM\"" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo "xdebug.remote_port=9001" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+#TODO: should be replaced by a dynamic env variable
+RUN echo "xdebug.remote_host=10.0.0.21" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
+COPY config/php.ini /usr/local/etc/php/
 
 RUN echo 'alias sf="php app/console"' >> ~/.bashrc
 RUN echo 'alias sf3="php bin/console"' >> ~/.bashrc
 
+# install editor
+RUN apt-get install -y nano
+# install browserify
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
+RUN npm install browserify -g
+RUN ln -s /usr/bin/nodejs /usr/bin/node
+
 WORKDIR /var/www/symfony
+
+ENV TERM xterm
