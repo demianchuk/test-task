@@ -5,7 +5,7 @@ services:
         image: jwilder/nginx-proxy
         container_name: nginx-proxy
         ports:
-          - "81:80"
+          - "80:80"
         volumes:
           - /var/run/docker.sock:/tmp/docker.sock:ro
     db:
@@ -38,7 +38,7 @@ services:
         volumes:
             - ./ci/logs/nginx/:/var/log/nginx
         environment:
-            - VIRTUAL_HOST=symfony.test.dev
+            - VIRTUAL_HOST=165.227.159.165
     redis:
         image: redis:latest
         ports:
