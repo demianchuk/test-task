@@ -20,7 +20,7 @@ DB param's for db container
 
 2.## NPM packages
 ```
-#npm should be installed globally
+#npm should be installed globally (apt install npm)
 npm install --ignore-scripts
 ```
 
@@ -45,7 +45,11 @@ $ docker exec -it php bin/console doctrine:schema:update --force
 
 6.## VIRTUAL HOST
 ```
-$ Add virtual host: symfony.test.dev to your hosts file
+$ Change virtual host parameter in nginx section, if you need  
+currently it is set to 127.0.0.1. It can be domain name or IP address of your
+server. Nginx proxy uses 81 port, but you can change it on 80 or any another.
+By default settings start web page is available on 127.0.0.1:80
+Remeber about symfony permissions: https://symfony.com/doc/3.2/setup/file_permissions.html
 ```
 
 7.## Running tests
