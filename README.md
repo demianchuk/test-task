@@ -85,5 +85,6 @@ See Authorization Success:
 
 To check code standards
 docker exec -it php ./vendor/bin/phpcs --standard=PSR1,PSR2,./ct3-ruleset.xml --extensions=php src/ --colors
-explenations - https://docs.google.com/document/d/1r1zIb6F4JWtFojFtw8mZ39dlxih5XDHieCSgEBatRo8/edit
+
+Additional explenations - https://docs.google.com/document/d/1r1zIb6F4JWtFojFtw8mZ39dlxih5XDHieCSgEBatRo8/edit
 ```
