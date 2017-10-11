@@ -41,6 +41,7 @@ docker exec -it php bin/console assetic:dump --no-debug
 5.## DB schema
 ```
 $ docker exec -it php bin/console doctrine:schema:update --force
+if you are running app first time maybe you should restart docker containers
 ```
 
 6.## VIRTUAL HOST
